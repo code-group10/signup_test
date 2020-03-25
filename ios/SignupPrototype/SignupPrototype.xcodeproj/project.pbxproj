@@ -16,6 +16,8 @@
 		8D63A1472429CB2D00D799F7 /* SignupPrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D63A1462429CB2D00D799F7 /* SignupPrototypeTests.swift */; };
 		8D63A1532429FAC300D799F7 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D63A1522429FAC300D799F7 /* Request.swift */; };
 		8D63A1552429FFA400D799F7 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D63A1542429FFA400D799F7 /* NetworkTests.swift */; };
+		8D63A158242A554800D799F7 /* PasswordFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D63A157242A554800D799F7 /* PasswordFieldDelegate.swift */; };
+		8D63A15A242A57A300D799F7 /* EmailFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D63A159242A57A300D799F7 /* EmailFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 		8D63A1482429CB2D00D799F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D63A1522429FAC300D799F7 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		8D63A1542429FFA400D799F7 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		8D63A157242A554800D799F7 /* PasswordFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordFieldDelegate.swift; sourceTree = "<group>"; };
+		8D63A159242A57A300D799F7 /* EmailFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFieldDelegate.swift; sourceTree = "<group>"; };
+		8D63A15B242A70C500D799F7 /* SignupPrototype.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignupPrototype.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,8 @@
 		8D63A12E2429CB2C00D799F7 /* SignupPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				8D63A15B242A70C500D799F7 /* SignupPrototype.entitlements */,
+				8D63A156242A550C00D799F7 /* Delegates */,
 				8D63A1512429FAAA00D799F7 /* Network */,
 				8D63A12F2429CB2C00D799F7 /* AppDelegate.swift */,
 				8D63A1312429CB2C00D799F7 /* SceneDelegate.swift */,
@@ -111,6 +118,15 @@
 				8D63A1522429FAC300D799F7 /* Request.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		8D63A156242A550C00D799F7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				8D63A159242A57A300D799F7 /* EmailFieldDelegate.swift */,
+				8D63A157242A554800D799F7 /* PasswordFieldDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,10 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D63A15A242A57A300D799F7 /* EmailFieldDelegate.swift in Sources */,
 				8D63A1342429CB2C00D799F7 /* ViewController.swift in Sources */,
 				8D63A1532429FAC300D799F7 /* Request.swift in Sources */,
 				8D63A1302429CB2C00D799F7 /* AppDelegate.swift in Sources */,
 				8D63A1322429CB2C00D799F7 /* SceneDelegate.swift in Sources */,
+				8D63A158242A554800D799F7 /* PasswordFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SignupPrototype/SignupPrototype.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66M38QS75Q;
 				INFOPLIST_FILE = SignupPrototype/Info.plist;
@@ -396,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SignupPrototype/SignupPrototype.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66M38QS75Q;
 				INFOPLIST_FILE = SignupPrototype/Info.plist;

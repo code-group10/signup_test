@@ -16,8 +16,8 @@ class NetworkTests: XCTestCase {
 
             let task = HTTP.getResponse(with: request) { (data, response, error) in
                 dump(data)
-                let json = String(data: data!, encoding: .utf8)
-                print(json!)
+                let anyData = try! JSONSerialization.jsonObject(with: data!, options: [])
+                
             }
 
             task.resume()
