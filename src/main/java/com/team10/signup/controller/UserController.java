@@ -30,13 +30,4 @@ public class UserController {
         logger.info("success");
         return "redirect:/";
     }
-
-    @GetMapping("/check/{name}")
-    public String check(@PathVariable String name) {
-        logger.info("name {}", name);
-        if (!name.equals("test")) {
-            return "main";
-        }
-        return "redirect:/users/login";
-    }
 }

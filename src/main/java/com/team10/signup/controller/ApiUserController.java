@@ -25,7 +25,7 @@ public class ApiUserController {
     @GetMapping("/check/{name}")
     public Result check(@PathVariable String name) {
         logger.info("name: {}", name);
-        if (name.equals("test")) {
+        if (name.equals("testing")) {
             return Result.fail();
         }
         return Result.ok();
