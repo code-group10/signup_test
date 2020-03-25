@@ -23,7 +23,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	compile group: 'com.h2database', name: 'h2', version: '1.4.192'
+	runtimeOnly group: 'com.h2database', name: 'h2', version: '1.4.192'
+	compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.0'
 //	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
